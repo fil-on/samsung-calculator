@@ -13,7 +13,9 @@ buttons.forEach((button) => {
         result.value = result.value.slice(0, result.value.length - 1);
         break;
       case '=':
-        const answer = eval(result.value.replace(/\×/g, '*')).toString();
+        const answer = eval(
+          result.value.replace(/\×/g, '*').replace(/\÷/g, '/')
+        ).toString();
         const decimal = answer.split('.')[1] || 0;
         if (decimal.length >= 10) {
           result.value = (+answer).toFixed(10);
