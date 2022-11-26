@@ -1,0 +1,139 @@
+/* black #010101 */
+/* green #427e04 */
+/* red #f76f68 */
+/* white #fafafa */
+/* line #171717 */
+/* button #1f1f1f */
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100vw;
+  height: 100vh; 
+}
+
+.wrapper {
+  display: flex;
+  flex-direction: column;
+  height: 700px;
+  width: 350px;
+  border: 2px solid green;
+  background-color: #010101;
+  border-radius: 10px;
+  overflow: hidden;
+
+}
+
+
+.input-wrapper  {
+  height: 30%;
+  display: flex;
+  flex-direction: column;
+}
+
+input {
+  margin-top: 15px;
+  width: 100%;
+  background-color: #010101;
+  color: #fff;
+  font-size: 40px;
+  border: none;
+  text-align: right;
+}
+
+input:focus {
+  outline: none;
+  border: none;
+}
+
+
+.keys {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-end;
+  align-items: center;
+  height: 8%;
+  width: 100%;
+}
+
+
+
+.line {
+  width: 100%;
+  height: 2px;
+  background-color: #171717;
+  margin-top: 3px;
+}
+
+.buttons {
+  height: auto;
+  width: 100%;
+  margin-top: 10px;
+  display: grid;
+  grid-template-columns: 25% 25% 25% 25%;
+}
+
+button {
+  margin: 10px;
+  width: 65px;
+  height: 65px;
+  border-radius: 50%;
+  display: flex;
+  align-self: center;
+  justify-self: center;
+  background-color: #1f1f1f;
+  color: #fff;
+  align-items: center;
+  justify-content: center;
+  font-size: 30px;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+button:hover {
+  background-color: #505050;
+}
+
+.red {
+  color: #f76f68;
+}
+
+.green {
+  color: #427e04;
+}
+
+.equal {
+  background-color: #427e04;
+}
+
+.equal:hover {
+  background-color: #92d351;
+}
+
+.delete {
+  font-size: 20px;
+  background-color: #010101;
+  position: relative;
+}
+
+
+/* TO REMOVE THE ARROWS / SPINNERS */
+
+/* Chrome, Safari, Edge, Opera */
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+/* Firefox */
+input[type=number] {
+  -moz-appearance: textfield;
+}
